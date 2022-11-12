@@ -1,43 +1,11 @@
 import './App.css';
+import Header from './components/header/Header';
 
 function App() {
   return (
     <>
-        {/* <!-- font --> */}
-    <link rel="preconnect" href="https://fonts.googleapis.com"/>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
-    <link href="https://fonts.googleapis.com/css2?family=Smooch&family=Ubuntu:wght@300&display=swap" rel="stylesheet"/>
+    <Header />
 
-    <p>Well</p>
-        <header>
-            {/* <!-- social links --> */}
-    <div class="nav-social">
-        <a href="https://github.com/purplebus">
-            <img src="img/logos/GitHub-Mark-64px.png" alt="GitHub"/>
-        </a>
-        <a href="https://www.linkedin.com/in/nassykova/">
-            <img src="./img/logos/linkedin-64.png" alt="LinkedIn"/>
-        </a>
-    </div>
-        <h1 class="heading">Nassy Kova</h1>
-
-    {/* <!-- navigation --> */}
-    <nav class="menu">
-        {/* <!-- HERE!!! --> */}
-        <label input type="checkbox" id ="checkbox-toggle"></label>
-        <label for="checkbox-toggle">&#9781;</label>
-        
-        <div class="menu-items">
-        <ul>
-            <li class="current-link">About Me</li>
-            <li><a href="./blog.html">Blog</a></li>
-            <li><a href="./cv.html">CV</a></li>
-            <li><a href="./contact.html">Contact</a></li>
-        </ul>
-    </div>
-    </nav>
-
-    </header>
     {/* // <!-- page content --> */}
 <section class="about-box">
     <section>
