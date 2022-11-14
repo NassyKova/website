@@ -1,5 +1,5 @@
 import React from "react";
-import LinkTo from "../header/LinkTo";
+import LinkTo from "./LinkTo";
 
 const Socials = () => {
     return (

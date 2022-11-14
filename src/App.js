@@ -1,29 +1,26 @@
-import './App.css';
-import Header from './components/header/Header';
+import React from "react";
+import "./App.css";
+import Navbar from './components/Navbar';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+import AboutMe from "./components/pages/AboutMe";
+import Projects from "./components/pages/Projects";
+import ContactMe from "./components/pages/ContactMe";
 
 function App() {
-  return (
-    <>
-    <Header />
-
-    {/* // <!-- page content --> */}
-<section class="about-box">
-    <section>
-        <img class="head-image" src="./img/main_photo.JPG" alt=""/>
-    </section>
-
-    {/* <p>
-        I am (almost) a Full Stuck Developer based in Melbourne. 
-        <br>Before coding, I worked in animation industry as a 2D Rigger on different <a id="link" href="https://www.imdb.com/name/nm9663771/">animation series</a>.</br>
-        <br>I like art, innovation, development, logic and sence.</br>
-    </p> */}
-</section>
-{/* <!-- copyright --> */}
-    <footer>
-        <p>&copy; Anastasia Dyakova</p>
-    </footer>
-</>
-  );
+    return (
+        <Router>
+            <Navbar />
+            <Header />
+            <Routes>
+                <Route exact path="/" element={<AboutMe />} />
+                <Route path="/ContactMe" element={<ContactMe />} />
+                <Route path="/Projects" element={<Projects />} />
+            </Routes>
+            <Footer />
+        </Router>
+    );
 }
 
 export default App;
