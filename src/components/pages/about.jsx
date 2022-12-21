@@ -3,7 +3,7 @@ import MainPhoto from "../../img/main_photo.JPG";
 
 const About = () => {
     return (
-        <div>
+        <>
             <img class="head-image" src={MainPhoto} alt="" />
 
             <p>
@@ -18,7 +18,7 @@ const About = () => {
                 </br>
                 <br>I like art, innovation, development, logic and sence.</br>
             </p>
-        </div>
+        </>
     );
 };
 

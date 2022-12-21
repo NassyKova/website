@@ -19,14 +19,17 @@ $neutral2: #BDD9F2;
 .nav-social {
     display: flex;
     margin: 1vw;
+
     img {
         width: 40px;
         margin: 10px;
         filter: opacity(20%);
     }
+
     img:hover {
         filter: opacity(100%);
     }
+
     a:hover {
         transition: 0.3s;
         transform: translateY(-3px);

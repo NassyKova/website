@@ -1,9 +1,5 @@
-$primary1: #AEB9F2;
-$primary2: #88AABF;
-$primary3: #A7BDD9;
-$primary4: #5b666c;
-$neutral1: #F0F2F2;
-$neutral2: #BDD9F2;
+import styled from "styled-components";
+
 
 
 // hover image rules
