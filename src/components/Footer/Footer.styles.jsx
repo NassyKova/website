@@ -7,15 +7,17 @@ export const Wrapper = styled.div`
   display: flex;
   align-items: center;
   height: 50px;
-  background: darkgrey;
   padding: 0 20 px;
   bottom: 10;
 `;
 
 export const Content = styled.div`
-  position: relative;
+  position: absolute;
+
   margin: 20px;
-  text-align: end;
-  opacity: 0.4;
+  bottom: 8px;
+  right: 16px;
+  z-index: 10;
+  opacity: 0.2;
   font-family: "Libre Baskerville", serif;
 `;

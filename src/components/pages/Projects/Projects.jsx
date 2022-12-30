@@ -1,13 +1,15 @@
 import React from "react";
 import Blog1 from "../../../img/blog/tech1.jpg";
+import { Wrapper, Title, Project , ProjectImage, ProjectContent} from "./Projects.styles";
 
 const Blogs = () => {
     return (
+        <Wrapper>
         <div>
             <h2>Lorem Ipsum</h2>
             <h5>30.02.2025</h5>
-            <img src={Blog1} alt="Laptop" />
-            <p>
+            <ProjectImage src={Blog1} alt="Laptop"> </ProjectImage>
+            <ProjectContent>
                 Integer id libero dapibus, vestibulum purus id, condimentum
                 erat. Sed auctor diam ut elit interdum euismod. Proin arcu diam,
                 interdum a venenatis in, pulvinar vel justo. Integer viverra
@@ -20,8 +22,9 @@ const Blogs = () => {
                 augue lorem mollis ante, sed aliquet arcu nibh ut tortor. In
                 rhoncus, tortor ut vehicula finibus, tortor justo elementum
                 magna, id molestie tellus mi ut turpis.
-            </p>
+                </ProjectContent>
         </div>
+        </Wrapper>
     );
 };
 
