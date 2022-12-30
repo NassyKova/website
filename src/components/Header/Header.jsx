@@ -1,5 +1,5 @@
 import React from "react";
-import { Wrapper } from "../Socials.styles";
+import { Wrapper } from "./Header.styles";
 
 const Header = () => {
   return(

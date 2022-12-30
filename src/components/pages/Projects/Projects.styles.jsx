@@ -1,7 +1,5 @@
 import styled from "styled-components";
 
-
-
 // hover image rules
 @mixin hover_img {
     opacity: 40%;

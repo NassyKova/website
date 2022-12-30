@@ -20,6 +20,13 @@ export const GlobalStyle = createGlobalStyle`
 body{
   margin: 0;
   padding: 0;
+  font-family: $body-font-family;
+    margin: 2vw;
+    min-height: calc(100vh - 4vw);
+    background-image: linear-gradient(to bottom right, rgba(255,0,0,0),$primary2);
+    background-size: 100% 100%;
+    display: flex;
+    flex-direction: column;
 
   h1{
     font-size: 2rem;
