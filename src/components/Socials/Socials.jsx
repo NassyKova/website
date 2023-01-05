@@ -8,17 +8,19 @@ const Socials = () => {
     <Wrapper>
       <a href="https://github.com/NassyKova" target="_blank" rel="noreferrer">
         {" "}
+        <Image>
+          <img src={GithubImage} alt="GitHub" />
+        </Image>
       </a>
-      <Image>
-        <img src={GithubImage} alt="GitHub" />
-        <a
-          href="https://www.linkedin.com/in/nassykova/"
-          target="_blank"
-          rel="noreferrer"
-        >
+      <a
+        href="https://www.linkedin.com/in/nassykova/"
+        target="_blank"
+        rel="noreferrer"
+      >
+        <Image>
           <img src={LinkedinImage} alt="LinkedIn" />
-        </a>{" "}
-      </Image>
+        </Image>
+      </a>{" "}
     </Wrapper>
   );
 };

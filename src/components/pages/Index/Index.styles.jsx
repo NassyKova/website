@@ -7,29 +7,30 @@ export const Wrapper = styled.div`
   align-items: center;
 `;
 export const Content = styled.div`
-    margin: 3vw 15vw;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @media screen and (max-width: 600px) {
-        margin: 3vw 2vw;
-    }
-
-    @media screen and (max-width: 800px) {
-        margin: 3vw 3vw;
-    
-  p {
-    margin: 1em;
-    text-align: center;
+  margin: 3vw 15vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @media screen and (max-width: 600px) {
+    margin: 3vw 2vw;
   }
-  #link {
-        color: var(--grey);
-        :hover {
-          background-color: var(--lightblue);
-        }
-        :visited {
-          background-color: var(--lightblue);
-        }
+
+  @media screen and (max-width: 800px) {
+    margin: 3vw 3vw;
+
+    p {
+      margin: 1em;
+      text-align: center;
+    }
+    #link {
+      color: green;
+      background-color: red;
+      :hover {
+        background-color: var(--lightblue);
+      }
+      :visited {
+        background-color: var(--lightblue);
+      }
     }
   }
 `;

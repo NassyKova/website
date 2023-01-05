@@ -1,23 +1,39 @@
-import React from 'react';
+import React from "react";
+import { Wrapper, Text } from "./Contact.styles";
 
+function MailtTo({ email, subject, body, ...props }) {
+  return (
+    <a href={`mailto:${email}?subject=${subject || ""}&body=${body || ""}`}>
+      {props.children}
+    </a>
+  );
+}
 const Contact = () => {
-return (
-<section class="contact-box">
-    <h1>Say Hi!</h1>
-            <form class="contact-form">
+  return (
+    <Wrapper>
 
-                    <label for="name">Name: </label>
-                    <input type="text" id="input-name" placeholder="Your name"/>
-                
-                    <label for="email">Email: </label>
-                    <input type="email" id="input-email" placeholder="email@email.com"/>
+      <Text>
+      <br /> <br />
+      <br />
+        <MailtTo
+          email="hi@nassykova"
+          subject="Hey Nassy"
+          body="Hey Nassy, this is me!"
+        >
+          Mail me
+        </MailtTo>
+        <br />
 
-                    <label for="message">Message: </label>
-                    <textarea type="text"  id="input-message" placeholder="Hi Nassy,"></textarea>
-                <button >Submit </button>
-                    </form>
-    </section>
-);
+        <a
+          href="https://www.linkedin.com/in/nassykova/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          LinkedIn
+        </a>
+      </Text>
+    </Wrapper>
+  );
 };
 
 export default Contact;
