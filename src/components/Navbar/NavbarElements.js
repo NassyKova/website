@@ -17,11 +17,8 @@ export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
   text-decoration: none;
-  :active {
-    background-color: var(--primary4);
-  }
   height: 100%;
-  border-radius: 20%;
+  border-radius: 25%;
   padding: 1.5vw;
   margin: 1vw;
   font-size: 1.5em;
@@ -31,6 +28,7 @@ export const NavLink = styled(Link)`
     color: var(--primary4);
     text-shadow: 0.5px 0.5px var(--neutral2);
     text-decoration: none;
+    background-color: var(--primary2);
   }
   :hover {
     background-color: var(--primary3);

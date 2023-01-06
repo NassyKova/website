@@ -1,31 +1,86 @@
 import React from "react";
-import Blog1 from "../../../img/blog/tech1.jpg";
-import { Wrapper, Title, Project , ProjectImage, ProjectContent} from "./Projects.styles";
 
-const Blogs = () => {
-    return (
-        <Wrapper>
-        <div>
-            <h2>Lorem Ipsum</h2>
-            <h5>30.02.2025</h5>
-            <ProjectImage src={Blog1} alt="Laptop"> </ProjectImage>
-            <ProjectContent>
-                Integer id libero dapibus, vestibulum purus id, condimentum
-                erat. Sed auctor diam ut elit interdum euismod. Proin arcu diam,
-                interdum a venenatis in, pulvinar vel justo. Integer viverra
-                risus vel faucibus semper. Donec congue eleifend enim vitae
-                dapibus. Aliquam erat volutpat. Donec eget leo justo. Proin
-                lacus dolor, tempus a mi a, sagittis vulputate nulla. Fusce
-                convallis nisi eget ex dignissim laoreet. Donec cursus, ligula
-                id elementum dictum, arcu ante blandit nibh, in vehicula nisi
-                libero et metus. Nam bibendum, tortor non porttitor viverra,
-                augue lorem mollis ante, sed aliquet arcu nibh ut tortor. In
-                rhoncus, tortor ut vehicula finibus, tortor justo elementum
-                magna, id molestie tellus mi ut turpis.
-                </ProjectContent>
-        </div>
-        </Wrapper>
-    );
-};
+import {
+  createStyles,
+  SimpleGrid,
+  Card,
+  Image,
+  Text,
+  Container,
+  AspectRatio,
+} from "@mantine/core";
 
-export default Blogs;
+import MetImage from "../../../img/Met.png";
+const mockdata = [
+  {
+    // links: <a href="http://artworkfromthemet.netlify.app/">;
+    title: "The Metropolitan Museum of Art Collection API",
+    image: <img src={MetImage} alt="Met" />,
+
+    // </a>
+  },
+  {
+    title: "Best forests to visit in North America",
+    image:
+      "https://images.unsplash.com/photo-1448375240586-882707db888b?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+  },
+  {
+    title: "Hawaii beaches review: better than you think",
+    image:
+      "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+  },
+  {
+    title: "Mountains at night: 12 best locations to enjoy the view",
+    image:
+      "https://images.unsplash.com/photo-1519681393784-d120267933ba?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=720&q=80",
+  },
+];
+
+const useStyles = createStyles((theme) => ({
+  card: {
+    transition: "transform 150ms ease, box-shadow 150ms ease",
+
+    "&:hover": {
+      transform: "scale(1.01)",
+      boxShadow: theme.shadows.md,
+    },
+  },
+
+  title: {
+    fontFamily: `Greycliff CF, ${theme.fontFamily}`,
+    fontWeight: 600,
+  },
+}));
+
+export function ArticlesCardsGrid() {
+  const { classes } = useStyles();
+
+  const cards = mockdata.map((article) => (
+    <Card
+      key={article.title}
+      p="md"
+      radius="md"
+      component="a"
+      href="#"
+      className={classes.card}
+    >
+      <AspectRatio ratio={1920 / 1080}>
+        <Image src={article.image} />
+      </AspectRatio>
+      <Text color="dimmed" size="xs" transform="uppercase" weight={700} mt="md">
+        {article.date}
+      </Text>
+      <Text className={classes.title} mt={5}>
+        {article.title}
+      </Text>
+    </Card>
+  ));
+
+  return (
+    <Container py="xl">
+      <SimpleGrid cols={2} breakpoints={[{ maxWidth: "sm", cols: 1 }]}>
+        {cards}
+      </SimpleGrid>
+    </Container>
+  );
+}
