@@ -12,7 +12,6 @@ export const Nav = styled.nav`
   font-size: 1.5em;
 `;
 
-
 export const NavLink = styled(Link)`
   display: flex;
   align-items: center;
@@ -23,7 +22,7 @@ export const NavLink = styled(Link)`
   margin: 1vw;
   font-size: 1.5em;
   color: #35383a;
-  
+
   cursor: pointer;
   &.active {
     color: var(--primary4);
@@ -54,13 +53,5 @@ export const Bars = styled(FaBars)`
 export const NavMenu = styled.div`
   display: flex;
   align-items: center;
-  /* margin-right: -24px; */
-  /* Second Nav */
-  /* margin-right: 24px; */
-  /* Third Nav */
-  /* width: 100vw;
-white-space: nowrap; */
-  @media screen and (max-width: 768px) {
-    display: none;
-  }
+  margin-right: -24px;
 `;
