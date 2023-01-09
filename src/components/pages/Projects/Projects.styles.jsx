@@ -8,6 +8,7 @@ export const BlogImage = styled.img`
 
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 1em;
   :hover {
     opacity: 40%;
     transition: 0.3s;
@@ -16,12 +17,13 @@ export const BlogImage = styled.img`
 `;
 
 export const BlogPost = styled.div`
-  margin-top: 2vw;
+  margin-top: 3vw;
   border-bottom: 1px solid black;
   width: 30vw;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 2em;
+  margin-bottom: 3em;
+  transition: 0.3s;
 
   a:hover,
   a:visited,
@@ -32,14 +34,21 @@ export const BlogPost = styled.div`
   }
 
   p {
-
     text-align: justify;
   }
 `;
 
 export const GithubRepo = styled.div`
-img{
-  width: 30px;
-}
+  img {
+    width: 30px;
+    margin-bottom: 10px;
+    animation: animateSocials 0.3s;
+    opacity: 0.2;
+    transition: 0.3s;
 
-`
+    :hover {
+      opacity: 0.9;
+      filter: drop-shadow(2px 2px grey);
+    }
+  }
+`;
