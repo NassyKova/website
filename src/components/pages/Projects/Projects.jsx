@@ -75,7 +75,7 @@ export class CardDemo extends Component {
               target="_blank"
               rel="noreferrer"
             >
-              {" "}
+    
               <img src={GithubImage} alt="GitHub" />
             </a>
           </GithubRepo>

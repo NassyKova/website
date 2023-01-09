@@ -8,7 +8,6 @@ const Footer = () => {
     <Content>
       @ 2022 Nassy Kova (Anastasia Dyakova)
       <GithubRepo>
-
         <a
           href="https://github.com/NassyKova/website"
           target="_blank"
