@@ -71,7 +71,7 @@ export class CardDemo extends Component {
           </a>
           <GithubRepo>
             <a
-              href="https://github.com/NassyKova/no_geography"
+              href="https://github.com/Wade008/hackathon/tree/Nassy"
               target="_blank"
               rel="noreferrer"
             >
